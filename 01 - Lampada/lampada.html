@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lâmpada<br>
+    <button onclick="acender()">Acender</button>
+    <img id="lampada" src="./imagens/apagada.jpg"/>
+    <!--<img src="./imagens/acesa.jpg"/>
+    <img src="./imagens/quebrou.jpg"/>-->
+    <button onclick="apagar()">Apagar</button>
+    <script>
+        var qtde = 0;
+        var queimou = false;
+        var troca = document.getElementById("lampada");
+        function acender(){
+            if(qtde > 7){
+                queimou = true;
+            }
+
+            if(queimou){
+                troca.src = "./imagens/quebrou.jpg";
+            }else{
+                troca.src = "./imagens/acesa.jpg";
+                qtde++;
+            }
+            
+            //alert("Helo, World");
+        }
+        function apagar(){
+            if(!queimou){
+                troca.src = "./imagens/apagada.jpg";
+                qtde++;
+                //alert(qtde);
+            }
+        }
+
+    </script>
+</body>
+</html>
